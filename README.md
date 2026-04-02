@@ -1,4 +1,4 @@
-#TEST# cluster-api-control-plane-provider-talos
+# cluster-api-control-plane-provider-talos
 
 ## Intro
 
