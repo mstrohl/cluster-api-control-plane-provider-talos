@@ -100,12 +100,12 @@ func (suite *IntegrationSuite) SetupSuite() {
 		"openstack": "hack/test/templates/openstack-standard.yaml",
 	}
 
-<<<<<<< HEAD
-	templateFile := env("TEMPLATE_FILE", defaultTemplateFiles[strings.SplitN(providerType, ":", 2)[0]])
-=======
+	// OLD way of specifying template file, kept for backward compatibility
+	//templateFile := env("TEMPLATE_FILE", defaultTemplateFiles[strings.SplitN(providerType, ":", 2)[0]])
+
+	//new way of specifying template file, allows to specify a template file for each provider type
 	providerName := strings.SplitN(providerType, ":", 2)[0]
 	templateFile := env("TEMPLATE_FILE", defaultTemplateFiles[providerName])
->>>>>>> dd52fd3 (  feat: add OpenStack e2e test path via CAPO)
 
 	var (
 		clusterctlConfigPath string
